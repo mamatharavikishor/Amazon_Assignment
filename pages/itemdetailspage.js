@@ -1,12 +1,14 @@
+let productdetailspage=require('./productdetailspage')
 let itemdetailspage = function () {
-    let first_item = $(`.s-result-list div[data-index='0'] img`)
+    
     let title_ele = element(by.id('booksTitle'))
     let authordetails_ele = element(by.id('bylineInfo'))
     let ratingusers_ele = element(by.id('averageCustomerReviews_feature_div'))
     let tagelements_ele = $$('#tmmSwatches ul > li span.a-list-item a.a-button-text[href]>span')
+    
     //Printing the Book information after clicking on the first item
     this.itemfulldetails = async function () {
-        first_item.click()
+        productdetailspage.clickonfirstpage()
         let title = await title_ele.getAttribute('innerText')
         let authordetails = await authordetails_ele.getAttribute('innerText')
         let ratingusers = await ratingusers_ele.getAttribute('innerText')
