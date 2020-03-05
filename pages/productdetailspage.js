@@ -7,6 +7,7 @@ let productdetailspage = function () {
     let users_ele =  $(".s-result-list div[data-index='0'] span[aria-label]:nth-child(2) span")
     let handcovertags_ele = $$(".s-result-list div[data-index='0'] a.a-text-bold")
     let handcoverpricetags_ele = $$(".s-result-list div[data-index='0'] a > span > span.a-offscreen")
+    let first_item = $(`.s-result-list div[data-index='0'] img`)
     //Printing the first book details after search
     this.firstproductdetails = async function () {
         let bookName = await productname_ele.getText()
@@ -32,6 +33,10 @@ let productdetailspage = function () {
             console.log(tagName2)
         }
 
+
+    }
+    this.clickonfirstpage=function(){
+        first_item.click()
 
     }
 
