@@ -10,4 +10,4 @@
 1.Open the project from VS code(Node.js should be installed)
 2.Make sure to install the protractor package globally
 3.Go to terminal and enter npm install
-4.After installation ,enter protractor conf.js to execute the specs
+4.After installation ,enter  node dataProvider.js  then protractor conf.js to execute the specs
