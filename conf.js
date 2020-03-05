@@ -16,8 +16,7 @@ exports.config = {
 
     capabilities: {
         'browserName': 'chrome',
-        //shardTestFiles: true,
-        //maxInstances: 2
+        
     },
     specs: [ 'specs/productinfo-spec.js'],
     onPrepare: () => {
@@ -25,7 +24,6 @@ exports.config = {
         browser.manage().window().maximize()
         browser.manage().timeouts().implicitlyWait(30000)
         browser.manage().timeouts().pageLoadTimeout(30000)
-        // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
         jasmine.getEnv().addReporter(
             new HtmlReporter({
                 takeScreenShotsOnlyForFailedSpecs: true,
